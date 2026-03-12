@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: vkn-training-pipeline-
+  namespace: kubeflow
+spec:
+  entrypoint: training-pipeline
+  templates:
+  - name: training-pipeline
+    dag:
+      tasks:
+      - name: data-ingestion
+        templateRef:
+          name: data-ingestion-component
+          template: main
+      - name: train-model
+        templateRef:
+          name: pytorch-training-component
+          template: main
+        dependencies: [data-ingestion]
+        arguments:
+          parameters:
+          - name: epochs
+            value: "10"
+          - name: learning-rate
+            value: "0.001"
+      - name: register-model
+        templateRef:
+          name: mlflow-register-component
+          template: main
+        dependencies: [train-model]
+        arguments:
+          parameters:
+          - name: model-name
+            value: "vkn-enterprise-model"
+
+  # Pipeline parameters (override when running)
+  arguments:
+    parameters:
+    - name: dataset-uri
+      value: "blob://vkn-data-lake/bronze/training-data/"
+    - name: mlflow-tracking-uri
+      value: "http://mlflow-server.ai-platform:5000"

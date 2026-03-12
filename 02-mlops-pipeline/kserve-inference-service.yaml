@@ -1,0 +1,33 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: vkn-enterprise-model
+  namespace: ai-production
+  annotations:
+    sidecar.istio.io/inject: "true"          # For mTLS + observability
+spec:
+  predictor:
+    minReplicas: 2
+    maxReplicas: 20
+    scaleTarget: 50   # scale on 50 concurrent requests
+    model:
+      modelFormat:
+        name: pytorch
+      storageUri: "blob://vkn-model-registry/models/vkn-enterprise-model/1/"   # MLflow or S3 path
+      runtime: "kserve-triton"                  # Use NVIDIA Triton for high throughput
+      resources:
+        limits:
+          cpu: "4"
+          memory: "16Gi"
+          nvidia.com/gpu: "1"                   # GPU request
+        requests:
+          cpu: "2"
+          memory: "8Gi"
+          nvidia.com/gpu: "1"
+      env:
+      - name: MODEL_NAME
+        value: "vkn-enterprise-model"
+      - name: TRITON_LOG_VERBOSE
+        value: "1"
+  # Optional: Canary traffic shifting (for zero-downtime updates)
+  # canaryTrafficPercent: 20
