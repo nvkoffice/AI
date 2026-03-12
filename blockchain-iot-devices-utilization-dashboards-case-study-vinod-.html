@@ -1,0 +1,199 @@
+<html>
+<head>
+  <title>BlockChain for IoT devices utilization dashboards - A case study</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img src="https://media.licdn.com/mediaC5612AQFzeZEE4Mm3qg" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/blockchain-iot-devices-utilization-dashboards-case-study-vinod-">BlockChain for IoT devices utilization dashboards - A case study</a></h1>
+    <p class="created">Created on 2017-11-12 11:29</p>
+  <p class="published">Published on 2017-11-12 11:49</p>
+  <div>
+  <h3><em><u>Scenario</u></em></h3> 
+  <p><em>An industrial conglomerate outsourced “IoTization” of its equipment. Contract between customer and vendor is in sensors uptime and data exchange between equipment and control center. </em></p> 
+  <h3><em>&nbsp;<u>Problem Statement</u></em></h3> 
+  <p><em>Maintenance of Sensors up-time is challenge to vendor because of different factors, such as</em></p> 
+  <ul> 
+   <li><em>Power supply to IoT sensors and gate way</em></li> 
+   <li><em>Intermittent Internet </em></li> 
+   <li><em>Unavailability of centralized Server</em></li> 
+   <li><em>Delay in information to vendor in case of actual sensor failure</em></li> 
+  </ul> 
+  <p><em>However, first three cases are not the issue with vendor service. The last one is the gap in information which leads to decreased ROI to vendor and low satisfaction to customer. There are negotiations between customer and vendor at each billing cycle on up-time.</em></p> 
+  <p><strong><em>Overall it is a mistrust scenario between vendor and customer</em></strong><em>. </em></p> 
+  <h3><em>&nbsp;<u>How “cloud infra” can help in developing mistrust?</u></em></h3> 
+  <ul> 
+   <li><em>Cloud centralized – Cloud servers and uptime dashboards are either owned by customer or vendor. Should one of them trust other in data??</em></li> 
+   <li><em>Cloud is vulnerable </em></li> 
+   <li><em>Cloud demands trust but offers none</em></li> 
+   <li><em>Reduced ROI due to cloud charges</em></li> 
+  </ul> 
+  <h3><em><u>&nbsp;How can Blockchain help?</u></em></h3> 
+  <p><em>Block chain is a decentralized and distributed ledger between vendor and customer. Blockchain provides single source of truth to all the stake holders. It tokenized each sensor and records each transaction and provides audit trial on real time at both the parties. As Block chain will not record sensors downtime (arbitrates on smart contract) in first 3 scenarios customer will have clear root cause for data downtime and in last case, vendor will know as soon as customer knows about sensor being not working. Vendor can take action immediately to increase his ROI and Customer satisfaction. </em></p> 
+  <p><br></p> 
+  <div class="slate-resizable-image-embed slate-image-embed__resize-full-width"> 
+   <img data-media-urn="urn:li:digitalmediaAsset:C5612AQHzyVkUCZWkvw" src="https://media.licdn.com/dms/image/v2/C5612AQHzyVkUCZWkvw/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1520201050878?e=1773878400&amp;v=beta&amp;t=d6TnMXD8DVpWgeOW8S10tMMl8lFSHwMPUKDFP7XA8Xw"> 
+  </div> 
+  <h3><em><u>Where to Blockchain?</u></em></h3> 
+  <ul> 
+   <li><em>Anything real time audit and recording</em></li> 
+   <li><em>transaction recording </em></li> 
+   <li><em>Execution of contracts as recorded transaction ready for real time audit</em></li> 
+   <li><em>Decentralized Banking Scenarios like&nbsp;Clearing account, Settlement account, Asset tracking, </em></li> 
+   <li><em>Supply chain management</em></li> 
+   <li><em>Collaborative economy for SCM, invoice, receipt management, KYC etc.,</em></li> 
+   <li><em>IoT Scenarios on SLA and OLA records, uptime and service contracts, transactions </em></li> 
+   <li><em>Medical Scenarios à Health Records management</em></li> 
+   <li><em>Providence on contract for ownership, changing ownership</em></li> 
+   <li><em>Real estate contracts.</em></li> 
+   <li><em>Sales and money transaction</em></li> 
+   <li><em>Project contracts</em></li> 
+   <li><em>Single source of truth and distributed ledger</em></li> 
+   <li><em>All mistrusted transaction recording, where audit trail is needed</em></li> 
+   <li><em>Adhaar and SSN audit trials</em></li> 
+  </ul> 
+  <h3><em>Where Not?</em></h3> 
+  <ul> 
+   <li><em>Data storage</em></li> 
+   <li><em>Centralized scenarios like public address system, Environmental predictions..</em></li> 
+   <li><em>Full trust process scenarios</em></li> 
+   <li><em>Content management</em></li> 
+  </ul>
+ 
+</div>
+</body>
+</html>

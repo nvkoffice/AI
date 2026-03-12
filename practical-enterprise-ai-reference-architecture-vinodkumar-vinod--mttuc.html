@@ -1,0 +1,147 @@
+<html>
+<head>
+  <title>A Practical Enterprise AI Reference Architecture</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img src="https://media.licdn.com/mediaD5612AQGDgH12kn6UFg" alt="Full Spectrum Enterprise AI" title="Full Spectrum Enterprise AI" />
+      <h1><a href="https://www.linkedin.com/pulse/practical-enterprise-ai-reference-architecture-vinodkumar-vinod--mttuc">A Practical Enterprise AI Reference Architecture</a></h1>
+    <p class="created">Created on 2026-02-25 02:24</p>
+  <p class="published">Published on 2026-02-25 02:33</p>
+  <div><p>#EnterpriseArchitecture #AIArchitecture #AgenticAI #PlatformEngineering #LLMOps #ResponsibleAI #AIFinOps #EventDrivenArchitecture</p><p>Over the past several weeks, I’ve been refining an Enterprise AI Reference Architecture and have now structured it across three distinct layers: Solution Implementation, AI as a Capability Platform, and Enterprise AI Foundation. The goal is to separate concerns clearly — application logic, AI platform services, and enterprise-grade governance — rather than blending everything into a single diagram.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D5612AQE8id1AaagNLw" src="https://media.licdn.com/dms/image/v2/D5612AQE8id1AaagNLw/article-inline_image-shrink_1500_2232/B56ZySn6EpKoAU-/0/1771986463028?e=1773878400&amp;v=beta&amp;t=fakTSDBagC2z1TcO0fxOCD_fKYvkUvD3dnV8RyfwVBE"><figcaption></figcaption></figure><p></p><p>At the Solution Implementation Layer, the focus is business workflow execution. A user interacts through a FastAPI gateway into an AI orchestrator and intent router, which dynamically dispatches requests to specialized services: RAG for policy queries, MCP clients for secure system reads, ML forecasting engines for predictive scenarios, writeback agents for transactional updates, or direct LLM services for general chat. High-risk operations flow through approval/HITL validation before writeback. Context assembly, final LLM synthesis, guardrails, telemetry, and response handling complete the loop. This layer is deliberately modular: prediction engines, vector stores, MCP servers, and approval systems remain independently evolvable components. It represents “AI applied to business.”</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D5612AQEk47H4TAgoug" src="https://media.licdn.com/dms/image/v2/D5612AQEk47H4TAgoug/article-inline_image-shrink_1500_2232/B56ZySoBYaGwAU-/0/1771986494131?e=1773878400&amp;v=beta&amp;t=7EFRdXZSkhEWX69-Bd6VgH7yhFsRRzP3CMiXeGUZqN0"><figcaption></figcaption></figure><p></p><p>The second layer, AI as a Capability Platform, abstracts common AI services into reusable infrastructure. Here we see the agentic runtime with a chief orchestrator coordinating domain agents, semantic caching, model routing, guardrails, observability, and FinOps controls. Model registry, alignment pipelines, drift tracking, and event streaming form the operational backbone. This layer treats AI as an internal platform capability — similar to how enterprises treat cloud platforms or DevOps toolchains — ensuring reuse, governance, and scalability across multiple solutions.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D5612AQELUg1JY0zeUQ" src="https://media.licdn.com/dms/image/v2/D5612AQELUg1JY0zeUQ/article-inline_image-shrink_1500_2232/B56ZySoLxdKgAU-/0/1771986535166?e=1773878400&amp;v=beta&amp;t=u9YxkCy1Q3zy5ytivhDyyavcXlg6VK_g77p5dyUShtw"><figcaption></figcaption></figure><p></p><p>The third layer, Enterprise AI Foundation, embeds security, identity, compliance, auditability, and financial accountability. Enterprise RBAC integration, policy enforcement, event backbone (Kafka-style pub/sub), immutable audit trails, centralized logging, and cost attribution engines ensure that AI does not operate as an experimental silo but as governed enterprise infrastructure. Human-in-the-loop mechanisms and low-confidence routing enforce bounded autonomy, particularly in regulated environments.</p><p>By separating these three layers, the architecture achieves clarity: business solutions evolve independently of AI platform mechanics, and both remain governed by enterprise standards. It aligns AI with established enterprise architecture principles — layered abstraction, event-driven integration, identity-first security, policy enforcement outside the model boundary, and cost transparency through FinOps.</p><p>I would value perspectives from fellow architects building real-world systems:</p><p>Should the AI capability layer be centralized as a shared platform team function, or federated by domain?</p><p>Where is the cleanest boundary between orchestration logic and business workflow logic?</p><p>How are you structuring AI FinOps in multi-model, multi-cloud deployments?</p><p>Do you treat guardrails as platform primitives or embed them within each solution?</p><p>Is an immutable ledger for AI decisions a practical compliance strategy or unnecessary complexity?</p><p>How are you handling model drift accountability at the enterprise architecture level?</p><p>Would you introduce policy-as-code enforcement at the gateway, orchestration layer, or event backbone?</p><p>AI is rapidly becoming a first-class architectural concern. I’m interested in how others are structuring their reference models to balance autonomy, governance, scalability, and cost control.</p><p><strong>Looking forward to thoughtful discussion from enterprise, cloud, security, and AI architects.</strong></p></div>
+</body>
+</html>
