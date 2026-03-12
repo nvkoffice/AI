@@ -1,4 +1,4 @@
-# 🏗️ Enterprise AI Platform  - Kubernatese first Architecture for AI First Enterprise
+# 🏗️ Enterprise AI Platform  - Kubernates first Architecture for AI First Enterprise
 **Production-Grade Reference Architecture & MLOps Blueprint**  
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)  
@@ -46,7 +46,7 @@ Target audience:
 9. Monitoring, Observability & Drift Detection  
 10. Governance, Security & FinOps (Zero Trust + AI-BOM + EU AI Act)
 
-### Kubernetese first Architecture for AI first enterprice 
+### Kubernetese first Architecture for AI first enterprise
 
 <img width="1043" height="480" alt="mermaid-diagram-2026-03-12-163750" src="https://github.com/user-attachments/assets/e9b1186e-4073-4a3f-8491-e3923f645dce" />
 
@@ -128,7 +128,7 @@ Mermaid diagram of the pipeline (copy from previous conversation) is in `05-diag
 ---
 
 ## 📈 Roadmap (Next 30 Days)
-More Architectures and pipleline YAML and JSONs
+More Architectures and pipeline YAML and JSONs
 ---
 
 ## 📜 License
