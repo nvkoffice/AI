@@ -55,7 +55,7 @@ Target audience:
 
 ## 📁 Infra guide for my projects
 
-
+<img width="1043" height="480" alt="mermaid-diagram-2026-03-12-163750" src="https://github.com/nvkoffice/vkn-enterprise-ai-platform/blob/main/05-Images/MyHWSelectionTemplate.png" />
 ---
 
 ## 📁 Repository Structure
