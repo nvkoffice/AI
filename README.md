@@ -49,7 +49,11 @@ Target audience:
 ### Kubernetese first Architecture for AI first enterprise
 
 <img width="1043" height="480" alt="mermaid-diagram-2026-03-12-163750" src="https://github.com/user-attachments/assets/e9b1186e-4073-4a3f-8491-e3923f645dce" />
+
+## 📁 Data Pipeline
 <img width="1043" height="480" alt="mermaid-diagram-2026-03-12-163750" src="https://github.com/nvkoffice/vkn-enterprise-ai-platform/blob/main/05-Images/DE_CC_Fraud_Detection.png" />
+
+## 📁 Infra guide for my projects
 
 
 ---
